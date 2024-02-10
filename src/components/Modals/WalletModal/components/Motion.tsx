@@ -36,17 +36,16 @@ export const ModalContentVariants: Variants = {
 }
 export const LoadingVariants: Variants = {
 	animate: {
-		opacity: [1, 0.7, 0.5, 0.3, 0.5, 0.7, 1],
-		rotate: 360,
+		scale: [1, 0.85, 1],
 		transition: {
 			duration: 2,
 			repeat: Number.POSITIVE_INFINITY,
-			repeatType: "loop",
-			type: "easeInOut"
+			repeatType: "mirror",
+			type: "easeOut"
 		}
 	},
 	hidden: {
 		rotate: 0,
-		transition: { duration: 0.4, type: "easeOut" }
+		transition: { duration: 1, type: "easeOut" }
 	}
 }

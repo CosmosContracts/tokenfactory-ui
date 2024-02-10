@@ -17,7 +17,7 @@ export const ConnectingView = ({
 	let title = "Requesting Connection"
 	let desc: string =
 		mode === "wallet-connect"
-			? `Approve ${prettyName} connection request on your mobile.`
+			? `Approve the ${prettyName} connection request on your mobile.`
 			: `Open the ${prettyName} browser extension to connect your wallet.`
 
 	if (message === "InitClient") {

@@ -7,7 +7,7 @@ export const SimpleModalView = ({
 	modalHead
 }: SimpleModalViewType) => {
 	return (
-		<Stack color="white" flex={1} h="full" spacing={1}>
+		<Stack color="brand.4" flex={1} h="full" spacing={1}>
 			{modalHead}
 			{modalContent}
 		</Stack>

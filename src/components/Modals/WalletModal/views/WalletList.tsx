@@ -25,7 +25,11 @@ export const WalletListView = ({ onClose, wallets }: WalletListViewProps) => {
 	}, [])
 
 	const modalHead = (
-		<SimpleModalHead backButton={false} onClose={onClose} title="Welcome!" />
+		<SimpleModalHead
+			backButton={false}
+			onClose={onClose}
+			title="Welcome to Juno!"
+		/>
 	)
 
 	const walletsData = useMemo(() => {

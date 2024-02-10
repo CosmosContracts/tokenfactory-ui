@@ -47,7 +47,10 @@ export const SimpleConnectModal = ({
 				/>
 				<DrawerContent
 					alignSelf="center"
-					bg="rgba(73, 11, 188, 1)"
+					bg="brand.2"
+					shadow="none"
+					borderTop="1.6px solid"
+					borderColor="border.1"
 					h="35lvh"
 					backdropFilter="blur(15px)"
 					roundedTop="2xl"
@@ -73,7 +76,7 @@ export const SimpleConnectModal = ({
 			<ModalOverlay backdropFilter="blur(10px) saturate(50%)" />
 			<ModalContent
 				alignSelf="center"
-				bg="brand.1"
+				bg="brand.2"
 				rounded="2xl"
 				h="35lvh"
 				color="white"

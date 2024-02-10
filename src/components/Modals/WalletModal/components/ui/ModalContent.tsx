@@ -21,18 +21,18 @@ const handleStatusColor = (status: LogoStatus) => {
 	switch (status) {
 		case LogoStatus.Loading:
 			return {
-				border: "black",
-				text: "gray.800"
+				border: "brand.3",
+				text: "brand.4"
 			}
 		case LogoStatus.Warning:
 			return {
 				border: "yellow.400",
-				text: "gray.800"
+				text: "brand.4"
 			}
 		case LogoStatus.Error:
 			return {
 				border: "red.500",
-				text: "gray.800"
+				text: "brand.4"
 			}
 		default:
 			return undefined
@@ -76,16 +76,14 @@ export const SimpleDisplayModalContent = ({
 				>
 					<MotionFlex
 						animate="animate"
-						border="2px solid"
-						borderBottomColor="transparent"
-						borderTopColor="transparent"
+						bgImage={logo}
+						bgSize="contain"
 						rounded="full"
-						borderLeftColor={handleStatusColor(status)?.border}
-						borderRightColor={handleStatusColor(status)?.border}
 						bottom={-1.5}
 						top={-1.5}
 						left={-1.5}
 						right={-1.5}
+						layout
 						pos="absolute"
 						initial="hidden"
 						variants={LoadingVariants}
