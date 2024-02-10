@@ -19,13 +19,15 @@ import { useActiveFormStepStore } from "@state/activeFormStepState"
 import {
 	MotionButton,
 	MotionFlex,
-	MotionIconButton
+	MotionIconButton,
+	MotionImage
 } from "@theme/motion/components"
 import { MotionFormControl } from "@theme/motion/components/MotionFormControl"
 import { MotionGrid } from "@theme/motion/components/MotionGrid"
 import {
 	accountCardCover,
 	button,
+	godrays,
 	heading,
 	stack,
 	stackHeader,
@@ -107,6 +109,7 @@ export const CreateForm = () => {
 			void headingControls.start("confirmed")
 			void godraysControls.start("confirmed")
 			void stackHeaderControls.start("hidden")
+			void buttonControls.start("completed")
 			setCompleted(true)
 		}
 	}, [isSuccess])
@@ -309,11 +312,26 @@ export const CreateForm = () => {
 									w="full"
 									textAlign="center"
 									lineHeight="0.8"
+									textShadow="1px 2px 4px black"
 								>
-									Confirm Settings
+									{completed ? "Token Created!" : "Confirm Token Settings"}
 								</Heading>
 							</MotionFlex>
-
+							<MotionImage
+								animate={godraysControls}
+								variants={godrays}
+								src="/assets/godrays.png"
+								style={{
+									filter: "saturate(150%)",
+									height: "20rem",
+									left: "calc(50% - 10rem)",
+									position: "absolute",
+									top: "calc(50% - 11rem)",
+									width: "20rem",
+									zIndex: 1
+								}}
+								initial="idle"
+							/>
 							<MotionGrid
 								bg="brand.1"
 								backdropFilter="blur(15px)"
@@ -398,7 +416,7 @@ export const CreateForm = () => {
 						initial="step1"
 						pos="absolute"
 						onClick={
-							isSuccess
+							completed
 								? () => {
 										setActiveStep([1, -1])
 										setCompleted(false)
@@ -412,9 +430,10 @@ export const CreateForm = () => {
 						shadow="rgba(18, 253, 172, 0.5) 0px 0px 10px, rgba(255, 255, 255, 0.2) 0px 1px 0px inset, rgba(0, 0, 0, 0.15) 0px -3px 0px inset, rgb(129, 253, 172) 0px 0px 15px inset"
 						textTransform="capitalize"
 						minW="6rem"
+						w="full"
 						alignSelf="end"
 					>
-						{isSuccess ? "Create Another Token" : "Next Step"}
+						{completed ? "Create Another Token" : "Next Step"}
 					</MotionButton>
 				)}
 			</AnimatePresence>

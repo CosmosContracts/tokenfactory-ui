@@ -1,4 +1,5 @@
 import { Box } from "@chakra-ui/react"
+import { useActiveFormStepStore } from "@state/activeFormStepState"
 import { MotionFlex, MotionIcon } from "@theme/motion/components"
 import { stepper } from "@theme/motion/variants"
 import { useMount } from "ahooks"
@@ -231,6 +232,8 @@ export const SignUpStepper = ({ activeStep }: StepperProps) => {
 	const secondCircle = useAnimation()
 	const thirdCircle = useAnimation()
 
+	const { completed } = useActiveFormStepStore()
+
 	useEffect(() => {
 		setActive(activeStep)
 	}, [activeStep])
@@ -260,6 +263,18 @@ export const SignUpStepper = ({ activeStep }: StepperProps) => {
 
 		if (active === 3) {
 			const sequence = async () => {
+				await line2.start("start")
+				await thirdCircle.start("start")
+				await stepperControls.start("show")
+			}
+
+			void sequence()
+		}
+
+		if (completed) {
+			const sequence = async () => {
+				await line1.start("start")
+				await secondCircle.start("start")
 				await line2.start("start")
 				await thirdCircle.start("start")
 				await stepperControls.start("show")

@@ -1,6 +1,12 @@
 import { type Variants } from "framer-motion"
 
 export const button: Variants = {
+	completed: {
+		bottom: 15,
+		opacity: 1,
+		transition: { duration: 0.2, type: "tween", when: "afterChildren" },
+		width: "13.5rem"
+	},
 	step1: {
 		bottom: 15,
 		opacity: 1,

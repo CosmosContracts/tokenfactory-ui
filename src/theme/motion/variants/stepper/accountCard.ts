@@ -41,7 +41,7 @@ export const accountCardCover: Variants = {
 			stiffness: 150,
 			type: "spring"
 		},
-		y: 80
+		y: 60
 	},
 	idle: {
 		opacity: 1,

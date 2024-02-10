@@ -9,7 +9,7 @@ export const heading: Variants = {
 			stiffness: 150,
 			type: "spring"
 		},
-		y: 50
+		y: 75
 	},
 	idle: {
 		opacity: 1,
