@@ -32,7 +32,7 @@ export default defineConfig(() => {
 					}
 				}
 			},
-			sourcemap: false
+			sourcemap: true
 		},
 		optimizeDeps: {
 			esbuildOptions: {
@@ -54,16 +54,12 @@ export default defineConfig(() => {
 					global: true,
 					process: true
 				},
-				include: [
-					"crypto",
-					"stream",
-					"util",
-					"buffer",
-					"process",
-					"http",
-					"https"
-				],
-				protocolImports: false
+				// include: [
+				// 	"crypto",
+				// 	"stream",
+				// 	"util",
+				// ],
+				protocolImports: true
 			})
 		],
 		server: {
