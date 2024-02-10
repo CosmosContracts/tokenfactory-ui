@@ -1,9 +1,20 @@
 import { Icon, type IconProps } from "@chakra-ui/react"
 import { memo } from "react"
+import { useNavigate } from "react-router-dom"
 
 export const Logo = memo((props: IconProps) => {
+	const navigate = useNavigate()
+
 	return (
-		<Icon fill="none" viewBox="0 0 123 40" width="1em" height="1em" {...props}>
+		<Icon
+			onClick={() => navigate("/")}
+			fill="none"
+			viewBox="0 0 123 40"
+			width="1em"
+			height="1em"
+			_hover={{ cursor: "pointer" }}
+			{...props}
+		>
 			<path
 				fill="currentColor"
 				fillRule="evenodd"
