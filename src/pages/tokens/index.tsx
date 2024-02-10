@@ -111,8 +111,8 @@ export const MyTokens = () => {
 							>
 								<VStack align="start" minW="6rem" spacing={1}>
 									<Text
-										fontFamily="heading"
-										fontSize={{ base: "md", sm: "18" }}
+										fontFamily="black"
+										fontSize="md"
 										fontWeight="400"
 										lineHeight={1}
 										textAlign="start"
@@ -122,10 +122,10 @@ export const MyTokens = () => {
 									</Text>
 									<Text
 										lineHeight={1}
-										fontSize={{ base: "0.9em", sm: "14" }}
+										fontSize="sm"
 										textAlign="start"
 										fontWeight="400"
-										fontFamily="body"
+										fontFamily="heading"
 									>
 										{name}
 									</Text>
@@ -158,12 +158,12 @@ export const MyTokens = () => {
 					return (
 						<VStack spacing="1">
 							<Skeleton isLoaded={!isLoading} w="full">
-								<Text lineHeight="1">
+								<Text lineHeight="1" fontFamily="black" fontSize="md">
 									{shortenNumber(BigNumber(tokenInfo?.totalSupply ?? "0"), 2)}
 								</Text>
 							</Skeleton>
 							<Skeleton isLoaded={!isLoading} w="full">
-								<Text lineHeight="1" fontFamily="sm">
+								<Text lineHeight="1" fontFamily="heading" fontSize="sm">
 									{shortenNumber(BigNumber(tokenInfo?.balance ?? "0"), 2)}
 								</Text>
 							</Skeleton>

@@ -278,14 +278,12 @@ export const PortfolioTable = <Data extends object>({
 				</Table>
 				<HStack justify="center" mt={{ base: 4, md: 6 }} w="full">
 					<IconButton
-						_dark={{ _hover: { bg: "gray.600" }, bg: "gray.700" }}
 						_disabled={{
 							_active: {
 								bg: "whiteAlpha.200",
 								color: "whiteAlpha.500",
 								cursor: "not-allowed"
 							},
-							_dark: { bg: "whiteAlpha.200" },
 							_focus: {
 								bg: "whiteAlpha.200",
 								color: "whiteAlpha.500",
@@ -295,19 +293,20 @@ export const PortfolioTable = <Data extends object>({
 							color: "whiteAlpha.500",
 							cursor: "not-allowed"
 						}}
-						_hover={{ bg: "offwhite.3" }}
+						_active={{ color: "brand.4" }}
 						aria-label="firstPage"
-						bg="offwhite.4"
+						bg="brand.1"
 						icon={<FaAngleDoubleLeft />}
 						isDisabled={!table.getCanPreviousPage()}
 						onClick={() => table.setPageIndex(0)}
 						rounded="0.8em"
 						border="1.6px solid"
 						borderColor="border.1"
+						_hover={{ color: "brand.3" }}
+						color="brand.4"
 						size="md"
 					/>
 					<IconButton
-						_dark={{ _hover: { bg: "gray.600" }, bg: "gray.700" }}
 						_disabled={{
 							_active: {
 								bg: "whiteAlpha.200",
@@ -324,9 +323,11 @@ export const PortfolioTable = <Data extends object>({
 							color: "whiteAlpha.500",
 							cursor: "not-allowed"
 						}}
-						_hover={{ bg: "offwhite.3" }}
+						_hover={{ color: "brand.3" }}
+						_active={{ color: "brand.4" }}
+						color="brand.4"
 						aria-label="previousPage"
-						bg="offwhite.4"
+						bg="brand.1"
 						icon={<FaAngleLeft />}
 						isDisabled={!table.getCanPreviousPage()}
 						onClick={() => table.previousPage()}
@@ -348,7 +349,6 @@ export const PortfolioTable = <Data extends object>({
 						{table.getPageCount()}
 					</Text>
 					<IconButton
-						_dark={{ _hover: { bg: "gray.600" }, bg: "gray.700" }}
 						_disabled={{
 							_active: {
 								bg: "whiteAlpha.200",
@@ -365,9 +365,11 @@ export const PortfolioTable = <Data extends object>({
 							color: "whiteAlpha.500",
 							cursor: "not-allowed"
 						}}
-						_hover={{ bg: "offwhite.3" }}
+						_hover={{ color: "brand.3" }}
+						_active={{ color: "brand.4" }}
+						color="brand.4"
 						aria-label="nextPage"
-						bg="offwhite.4"
+						bg="brand.1"
 						icon={<FaAngleRight />}
 						isDisabled={!table.getCanNextPage()}
 						onClick={() => table.nextPage()}
@@ -377,7 +379,6 @@ export const PortfolioTable = <Data extends object>({
 						size="md"
 					/>
 					<IconButton
-						_dark={{ _hover: { bg: "gray.600" }, bg: "gray.700" }}
 						_disabled={{
 							_active: {
 								bg: "whiteAlpha.200",
@@ -394,9 +395,11 @@ export const PortfolioTable = <Data extends object>({
 							color: "whiteAlpha.500",
 							cursor: "not-allowed"
 						}}
-						_hover={{ bg: "offwhite.3" }}
+						_hover={{ color: "brand.3" }}
+						_active={{ color: "brand.4" }}
+						color="brand.4"
 						aria-label="lastPage"
-						bg="offwhite.4"
+						bg="brand.1"
 						icon={<FaAngleDoubleRight />}
 						isDisabled={!table.getCanNextPage()}
 						onClick={() => table.setPageIndex(table.getPageCount() - 1)}

@@ -111,7 +111,7 @@ export const SendModal = ({
 									id="toAddress"
 									letterSpacing={0.8}
 									_placeholder={{ letterSpacing: 0.8 }}
-									placeholder="0"
+									placeholder="juno1..."
 									{...register("toAddress", {
 										required: "Required"
 									})}
@@ -264,7 +264,7 @@ export const SendModal = ({
 								id="toAddress"
 								letterSpacing={0.8}
 								_placeholder={{ letterSpacing: 0.8 }}
-								placeholder="0"
+								placeholder="juno1..."
 								{...register("toAddress", {
 									required: "Required"
 								})}
