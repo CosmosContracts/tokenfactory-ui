@@ -379,13 +379,7 @@ export const CreateForm = () => {
 										Confirming this transaction will
 									</Text>
 									<Text lineHeight="1.2" fontFamily="black" textAlign="center">
-										create the following Token:{" "}
-									</Text>
-									<Text pt="2" lineHeight="1.2" fontSize="sm" fontFamily="body">
-										{watch("sender")}
-									</Text>
-									<Text fontSize="sm" lineHeight="1.2" fontFamily="body">
-										{watch("subdenom")}
+										create a token on the Juno blockchain.
 									</Text>
 								</VStack>
 							)}
