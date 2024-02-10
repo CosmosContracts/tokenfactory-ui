@@ -76,7 +76,7 @@ export const SimpleConnectModal = ({
 			<ModalOverlay backdropFilter="blur(10px) saturate(50%)" />
 			<ModalContent
 				alignSelf="center"
-				bg="brand.2"
+				bg="brand.1"
 				rounded="2xl"
 				h="35lvh"
 				color="white"
