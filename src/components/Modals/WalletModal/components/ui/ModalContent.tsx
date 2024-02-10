@@ -6,7 +6,6 @@ import {
 	Flex,
 	Grid,
 	HStack,
-	IconButton,
 	Skeleton,
 	Spacer,
 	Text,
@@ -15,7 +14,6 @@ import {
 import { useChain } from "@cosmos-kit/react-lite"
 import { MotionFlex } from "@theme/motion/components"
 import truncateAddress from "@utils/ui/truncateAddress"
-import { FaCheck } from "react-icons/fa6"
 
 const handleStatusColor = (status: LogoStatus) => {
 	switch (status) {
@@ -47,9 +45,7 @@ export const SimpleDisplayModalContent = ({
 	logo,
 	status
 }: ConnectModalContentType) => {
-	const { closeView, isWalletConnected } = useChain(
-		import.meta.env.VITE_CHAINNETWORK
-	)
+	const { isWalletConnected } = useChain(import.meta.env.VITE_CHAINNETWORK)
 
 	return (
 		<Flex
@@ -176,21 +172,6 @@ export const SimpleDisplayModalContent = ({
 			<Spacer />
 			<Flex w="17.5rem" justify="space-between">
 				{bottomButton}
-				<IconButton
-					h="12"
-					w="12"
-					rounded="full"
-					shadow="md"
-					_hover={{ filter: "brightness(120%)" }}
-					aria-label="close wallet modal"
-					color="white"
-					transition="0.15s all ease-in-out"
-					bg="green.400"
-					onClick={() => {
-						closeView()
-					}}
-					icon={<FaCheck size="24" />}
-				/>
 			</Flex>
 		</Flex>
 	)
