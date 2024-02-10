@@ -245,7 +245,7 @@ export const CreateForm = () => {
 								<Input
 									id="sender"
 									isDisabled
-									_disabled={{ color: "white" }}
+									_disabled={{ color: "brand.4" }}
 									{...register("sender", {
 										required: "Required"
 									})}
@@ -420,8 +420,9 @@ export const CreateForm = () => {
 							completed
 								? () => {
 										setActiveStep([1, -1])
+										reset()
+										setValue("sender", address!)
 										setCompleted(false)
-										navigate("/create")
 									}
 								: activeStep[0] === 2
 									? () => createToken({ denom: watch("subdenom") })
