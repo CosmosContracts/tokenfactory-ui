@@ -373,15 +373,22 @@ export const CreateForm = () => {
 									</Text>
 								</VStack>
 							</MotionGrid>
-
-							<VStack align="start" spacing="0">
-								<Text fontFamily="black" textAlign="center">
-									Confirming this transaction will create the following Token:{" "}
-									<chakra.span fontSize="sm" fontFamily="body">
-										factory/{watch("sender")}/{watch("subdenom")}
-									</chakra.span>
-								</Text>
-							</VStack>
+							{!completed && (
+								<VStack align="center" spacing="0">
+									<Text lineHeight="1.2" fontFamily="black" textAlign="center">
+										Confirming this transaction will
+									</Text>
+									<Text lineHeight="1.2" fontFamily="black" textAlign="center">
+										create the following Token:{" "}
+									</Text>
+									<Text pt="2" lineHeight="1.2" fontSize="sm" fontFamily="body">
+										{watch("sender")}
+									</Text>
+									<Text fontSize="sm" lineHeight="1.2" fontFamily="body">
+										{watch("subdenom")}
+									</Text>
+								</VStack>
+							)}
 						</MotionFlex>
 					)}
 				</AnimatePresence>

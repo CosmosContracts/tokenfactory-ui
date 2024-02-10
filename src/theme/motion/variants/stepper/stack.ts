@@ -12,13 +12,13 @@ export const stack: Variants = {
 		height: "22rem",
 		opacity: 1,
 		transition: { duration: 0.2, type: "tween", when: "afterChildren" },
-		width: "28rem"
+		width: "22.5rem"
 	},
 	step2: {
 		height: "24rem",
 		opacity: 1,
 		transition: { duration: 0.2, type: "tween", when: "afterChildren" },
-		width: "32rem"
+		width: "22.5rem"
 	},
 	step3: {
 		height: "25rem",
